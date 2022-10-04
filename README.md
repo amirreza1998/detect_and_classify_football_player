@@ -1,3 +1,4 @@
 # detect_and_classify_football_player
-in this project get video from 3 view of football pitch and detect at first player and then map them to football pitch 2d image and then use convolutional neural network to detect the team of them base on color and cropped image of them 
-<h4 style="font-size:300px;"><b>classification part<b><h4>
+<p>in this project get video from 3 view of football pitch and detect at first player and then map them to football pitch 2d image and then use convolutional neural network to detect the team of them base on color and cropped image of them <p>
+<h4 style="font-size:300px;"><b>classification part</b></h4>
+<p>in this part at first we should have image of cropped football players image for this we use code <b>.py</b> for get frame of video in each <b>n second</b> and save them in folder <b>image folder name</b> and then use <b>program to crop player image</b> this croption program give us xml of info about where is player and size and location of their anchor box and save them in folder <b>folder save xml of player location</b> and after that we use code <b>classification code name.py</b> to classification player that more explanation about code can be find in it ipynb file with codes</p>
