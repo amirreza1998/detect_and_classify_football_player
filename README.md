@@ -20,13 +20,19 @@ Then, you for example run the below line to generate a new video to be written i
 
 ffmpeg -safe 0 -f concat -i files.txt output.mp4</p>
 
+<h4><b>detect and generate spotted 2d map</b></h4>
+<p>In this part, our primary focus is to detect everyone (including the referee) in the
+scene. We also want to generate a 2D map of the field.
+i assume that all players are standing straight on the ground (ignore jumps and slide tackles)</p>
 
 <h4><b>Simultaneous picturing map to 2d image</b></h4>
 <p>in this part we get 3 camera movie get part of it by program <b>film cutting program</b> and then detect players and refree Simultaneous in 3 movie and map them in to the 2d map and make video from them by connect map of each frame </p>
 <p>the important point in this code is if the players or refree be in 3 or 2 cammera only one time should be spotted in 2d image</p>
 <p>code of this part are in folder by name "Simultaneous picturing map to 2d image"
+  
 <h4><b>classification part</b></h4>
-<p>in this part at first we should have image of cropped football players image for this we use code <b>.py</b> for get frame of video in each <b>n second</b> and save them in folder <b>frames</b> and then use <b><a href="https://github.com/tzutalin/labelImg">labelimg</a></b> this croption program give us xml of info about where is player and size and location of their anchor box and save them in folder <b>xmls</b> and after that we use code <b>classify_football_player_with_svm_classifier.ipynb</b> to classification player with svm classifier and <b>classify_football_player_with_cnn_classifier.ipynb</b> to classification player with convolutional neural network that more explanation about code can be find in it ipynb file with codes</p>
+<p>In this section, we assume we have the positions of the players. Now, we want to classify them. Keep in mind that the 2D map colors do not have to match the actual team’s color. The only goal is to separate players.
+in this part at first we should have image of cropped football players image for this we use code <b>.py</b> for get frame of video in each <b>n second</b> and save them in folder <b>frames</b> and then use <b><a href="https://github.com/tzutalin/labelImg">labelimg</a></b> this croption program give us xml of info about where is player and size and location of their anchor box and save them in folder <b>xmls</b> and after that we use code <b>classify_football_player_with_svm_classifier.ipynb</b> to classification player with svm classifier and <b>classify_football_player_with_cnn_classifier.ipynb</b> to classification player with convolutional neural network that more explanation about code can be find in it ipynb file with codes</p>
 <p>at end of the code of cnn classification have code that get input video by name of <b>"output.mp4"</b> that has been compiled before that is short time of complete and get that and map player location with color corresponding with thier tshirt color to 2d map and create video with connect that 2d map</p>
 <h3>colab links</h3>
 <p>https://colab.research.google.com/drive/1x_N9hzJmNzo15qhvWLelGmN3M9n_gpBK?usp=sharing</p>
