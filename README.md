@@ -34,6 +34,7 @@ i assume that all players are standing straight on the ground (ignore jumps and 
 <p>object detection in frames and flow players with id till get out of cammer filed of view
 for do this we use code When the players get close to each other, they don't get lost as much as possible. For this, it is better to use Tracker.
 In the codes of this folder, we follow the players between different frames. We consider a desired id for each player and identify the player with the same id in different frames using trackers. (Until the player leaves the frame or is lost for any other reason).
+code of this part are in folder of <b>"tracking players"</b>
 </p>
 <h4><b>classification part</b></h4>
 <p>In this section, we assume we have the positions of the players. Now, we want to classify them. Keep in mind that the 2D map colors do not have to match the actual team’s color. The only goal is to separate players.
