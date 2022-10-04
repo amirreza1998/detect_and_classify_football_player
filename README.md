@@ -23,7 +23,9 @@ ffmpeg -safe 0 -f concat -i files.txt output.mp4</p>
 <h4><b>detect and generate spotted 2d map</b></h4>
 <p>In this part, our primary focus is to detect everyone (including the referee) in the
 scene. We also want to generate a 2D map of the field.
-i assume that all players are standing straight on the ground (ignore jumps and slide tackles)</p>
+i assume that all players are standing straight on the ground (ignore jumps and slide tackles)
+all code of this part that is main part of this project implement in python name by name of <b>"main_code_cleared.py"</b>
+</p>
 
 <h4><b>Simultaneous picturing map to 2d image</b></h4>
 <p>in this part we get 3 camera movie get part of it by program <b>film cutting program</b> and then detect players and refree Simultaneous in 3 movie and map them in to the 2d map and make video from them by connect map of each frame </p>
