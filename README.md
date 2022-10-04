@@ -29,7 +29,12 @@ i assume that all players are standing straight on the ground (ignore jumps and 
 <p>in this part we get 3 camera movie get part of it by program <b>film cutting program</b> and then detect players and refree Simultaneous in 3 movie and map them in to the 2d map and make video from them by connect map of each frame </p>
 <p>the important point in this code is if the players or refree be in 3 or 2 cammera only one time should be spotted in 2d image</p>
 <p>code of this part are in folder by name "Simultaneous picturing map to 2d image"
-  
+
+<h4><b>object detection</b></h4>
+<p>object detection in frames and flow players with id till get out of cammer filed of view
+for do this we use code When the players get close to each other, they don't get lost as much as possible. For this, it is better to use Tracker.
+In the codes of this folder, we follow the players between different frames. We consider a desired id for each player and identify the player with the same id in different frames using trackers. (Until the player leaves the frame or is lost for any other reason).
+</p>
 <h4><b>classification part</b></h4>
 <p>In this section, we assume we have the positions of the players. Now, we want to classify them. Keep in mind that the 2D map colors do not have to match the actual team’s color. The only goal is to separate players.
 in this part at first we should have image of cropped football players image for this we use code <b>.py</b> for get frame of video in each <b>n second</b> and save them in folder <b>frames</b> and then use <b><a href="https://github.com/tzutalin/labelImg">labelimg</a></b> this croption program give us xml of info about where is player and size and location of their anchor box and save them in folder <b>xmls</b> and after that we use code <b>classify_football_player_with_svm_classifier.ipynb</b> to classification player with svm classifier and <b>classify_football_player_with_cnn_classifier.ipynb</b> to classification player with convolutional neural network that more explanation about code can be find in it ipynb file with codes</p>
